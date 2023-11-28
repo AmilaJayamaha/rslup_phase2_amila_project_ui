@@ -1,6 +1,6 @@
-import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
+import { mergeApplicationConfig, ApplicationConfig } from '@rxweb/angular-router';
 import { provideServerRendering } from '@angular/platform-server';
-import { appConfig } from './app.config';
+import { appConfig as clientConfig } from './app.config';
 
 const serverConfig: ApplicationConfig = {
   providers: [
@@ -8,4 +8,9 @@ const serverConfig: ApplicationConfig = {
   ]
 };
 
-export const config = mergeApplicationConfig(appConfig, serverConfig);
+const appConfig: ApplicationConfig = {
+  
+  providers: []
+};
+
+export const config = mergeApplicationConfig(clientConfig, appConfig, serverConfig);

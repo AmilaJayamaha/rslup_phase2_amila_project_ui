@@ -21,6 +21,9 @@
     "@angular/platform-server": "^17.0.0",
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.0",
+    "@rxweb/angular-router": "^0.0.2",
+    "@rxweb/http": "^0.0.2",
+    "@rxweb/storage": "^0.0.2",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -51,16 +54,15 @@
     "lint-staged": "^15.1.0",
     "typescript": "~5.2.2"
   },
-
-"husky": {
-  "hooks": {
-    "pre-commit": "lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx,scss}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
-},
-"lint-staged": {
-  "src/**/*.{js,ts,jsx,tsx,scss}": [
-    "eslint --fix",
-    "git add"
-  ]
-}
 }
