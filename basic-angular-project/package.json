@@ -25,7 +25,7 @@
     "@rxweb/http": "^0.0.2",
     "@rxweb/storage": "^0.0.2",
     "express": "^4.18.2",
-    "rxjs": "~7.8.0",
+    "rxjs": "~7.5.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
@@ -52,7 +52,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "lint-staged": "^15.1.0",
-    "typescript": "~5.2.2"
+    "typescript": "^5.3.2"
   },
   "husky": {
     "hooks": {
