@@ -1,5 +1,12 @@
-import { ApplicationConfig } from '@rxweb/angular-router';
+import { RxWebApplicationConfig } from '@rxweb/angular-router';
+import { RxHttp } from '@rxweb/http';
+import { ClientDataStorage } from '@rxweb/storage';
 
-export const appConfig: ApplicationConfig = {
-  providers: [] 
+const clientConfig: RxWebApplicationConfig = {
+  providers: [
+    RxHttp,
+    ClientDataStorage
+  ]
 };
+
+export const config = clientConfig;

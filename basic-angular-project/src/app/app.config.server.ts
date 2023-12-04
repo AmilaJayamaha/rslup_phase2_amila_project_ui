@@ -1,16 +1,12 @@
-import { mergeApplicationConfig, ApplicationConfig } from '@rxweb/angular-router';
-import { provideServerRendering } from '@angular/platform-server';
-import { appConfig as clientConfig } from './app.config';
+import { RxWebApplicationConfig } from '@rxweb/angular-router';
+import { RxHttp } from '@rxweb/http';
+import { ClientDataStorage } from '@rxweb/storage';
 
-const serverConfig: ApplicationConfig = {
+const serverConfig: RxWebApplicationConfig = {
   providers: [
-    provideServerRendering()
+    RxHttp,
+    ClientDataStorage
   ]
 };
 
-const appConfig: ApplicationConfig = {
-  
-  providers: []
-};
-
-export const config = mergeApplicationConfig(clientConfig, appConfig, serverConfig);
+export const config = serverConfig;
