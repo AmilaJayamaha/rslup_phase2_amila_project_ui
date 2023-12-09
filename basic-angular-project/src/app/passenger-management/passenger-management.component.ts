@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { PassengerManagementService } from 'basic-angular-project\src\app\passenger-management.service.ts';
 
 @Component({
   selector: 'app-passenger-management',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './passenger-management.component.html',
-  styleUrl: './passenger-management.component.scss'
+  styleUrls: ['./passenger-management.component.scss']
 })
 export class PassengerManagementComponent {
+  constructor(private passengerService: PassengerManagementService) {}
 
-}
+  }

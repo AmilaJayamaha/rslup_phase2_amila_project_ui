@@ -1,13 +1,15 @@
+// reservation-ticketing.component.ts
+
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ReservationTicketingService } from 'basic-angular-project\src\app\reservation-ticketing.service.ts';
 
 @Component({
   selector: 'app-reservation-ticketing',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './reservation-ticketing.component.html',
-  styleUrl: './reservation-ticketing.component.scss'
+  styleUrls: ['./reservation-ticketing.component.scss']
 })
 export class ReservationTicketingComponent {
+  constructor(private reservationTicketingService: ReservationTicketingService) {}
 
+  
 }
